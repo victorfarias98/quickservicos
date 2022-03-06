@@ -155,7 +155,7 @@
         $(document).ready(function() {
             // add what new inclue
              $(".add-what-includes").on('click',function(){
-                 let  total_element = $(".what-include-element").length;
+                 let total_element = $(".what-include-element").length;
                  let max = 5;
                 if(total_element < max ){
                   $(".append-additional-includes").append(

@@ -131,5 +131,20 @@ Route::group(['middleware' => ['setlang', 'globalVariable', 'maintains_mode']], 
 });
 
 
+
+Route::group(['middleware'=>['auth','inactiveuser']],function(){
+
+    // media upload routes for User
+    Route::group(['namespace'=>'User'],function(){
+        Route::post('/media-upload/all','MediaUploadController@all_upload_media_file')->name('web.upload.media.file.all');
+        Route::post('/media-upload','MediaUploadController@upload_media_file')->name('web.upload.media.file');
+        Route::post('/media-upload/alt','MediaUploadController@alt_change_upload_media_file')->name('web.upload.media.file.alt.change');
+        Route::post('/media-upload/delete','MediaUploadController@delete_upload_media_file')->name('web.upload.media.file.delete');
+        Route::post('/media-upload/loadmore', 'MediaUploadController@get_image_for_loadmore')->name('web.upload.media.file.loadmore');
+    });
+
+});
+
+
 require_once __DIR__ . '/seller.php';
 require_once __DIR__ . '/buyer.php';

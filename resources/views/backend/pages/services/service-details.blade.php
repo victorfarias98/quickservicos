@@ -101,9 +101,9 @@
                         </div>
                     </div>
 
+                    @if(!empty($service->service_id))
                     <div class="card">
                         <div class="card-body">
-
                             <div class="border-bottom mb-3">
                                 <h5>{{ __('Seller Details') }}</h5>
                             </div>
@@ -128,7 +128,7 @@
 
                         </div>
                     </div>
-
+                    @endif
                 </div>
                 <div class="col-lg-7 mt-5">
                     <div class="card">

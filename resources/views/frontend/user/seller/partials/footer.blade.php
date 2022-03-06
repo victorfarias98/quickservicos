@@ -10,6 +10,7 @@
 <script src="{{asset('assets/frontend/js/jquery.magnific-popup.js')}}"></script>
 <script src="{{asset('assets/frontend/js/jquery.nice-select.js')}}"></script>
 <script src="{{asset('assets/frontend/js/main.js')}}"></script>
+<script src="{{asset('assets/backend/js/sweetalert2.js')}}"></script>
 <script>
     $.ajaxSetup({
     headers: {

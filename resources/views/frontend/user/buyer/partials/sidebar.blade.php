@@ -33,7 +33,7 @@
                     <a href="{{ route('buyer.account.settings') }}"> <i class="las la-cog"></i> {{__('Password Change')}} </a>
                 </li>
                 <li class="list">
-                    <a href="{{ route('seller.logout')}}"> <i class="las la-sign-out-alt"></i> {{__('Log Out' )}} </a>
+                    <a href="{{ route('buyer.logout')}}"> <i class="las la-sign-out-alt"></i> {{__('Log Out' )}} </a>
                 </li>
 
             </ul>

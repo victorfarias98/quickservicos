@@ -278,12 +278,8 @@
 <x-media.js :type="'web'"/>
 
 <script src="{{asset('assets/backend/js/bootstrap-tagsinput.js')}}"></script>
-
-<script>
-    $('.meta-content').show();
-</script>
-
  <script>
+     $('.meta-content').show();
     $(document).ready(function(){
 
         //Permalink Code

@@ -26,13 +26,4 @@ Route::group(['prefix'=>'buyer','middleware'=>['auth','inactiveuser','UserRoleCh
     Route::get('ticket-view/{id}','Frontend\BuyerController@view_ticket')->name('buyer.support.ticket.view');
     Route::post('support-ticket/message-send', 'Frontend\BuyerController@support_ticket_message')->name('buyer.support.ticket.message.send');
 
-    // media upload routes for User
-    Route::group(['namespace'=>'User'],function(){
-    Route::post('/media-upload/all','MediaUploadController@all_upload_media_file')->name('web.upload.media.file.all');
-    Route::post('/media-upload','MediaUploadController@upload_media_file')->name('web.upload.media.file');
-    Route::post('/media-upload/alt','MediaUploadController@alt_change_upload_media_file')->name('web.upload.media.file.alt.change');
-    Route::post('/media-upload/delete','MediaUploadController@delete_upload_media_file')->name('web.upload.media.file.delete');
-    Route::post('/media-upload/loadmore', 'MediaUploadController@get_image_for_loadmore')->name('web.upload.media.file.loadmore');
-    });
-
 });

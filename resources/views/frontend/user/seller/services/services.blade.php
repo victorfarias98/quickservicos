@@ -17,7 +17,6 @@
                     </div>
                 </div>
                 @include('frontend.user.seller.partials.sidebar')
-                 @if($services->count() >= 1)
                 <div class="dashboard-right">
                     <div class="row">
                         <div class="col-lg-12">
@@ -29,6 +28,7 @@
                     <div class="btn-wrapper margin-top-50 text-right">
                         <a href="{{route('seller.add.services')}}" class="cmn-btn btn-bg-1"> {{__('Add Services' )}}</a>
                     </div>
+                 @if($services->count() >= 1)
                     @foreach($services as $data)
                     <div class="dashboard-service-single-item border-1 margin-top-40">
                         <div class="rows dash-single-inner">

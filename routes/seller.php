@@ -93,13 +93,5 @@ Route::group(['prefix'=>'seller','middleware'=>['auth','inactiveuser','BuyerChec
      Route::post('/to-do-list/delete/{id}','Frontend\SellerController@deleteTodolist')->name('seller.todolist.delete');
      Route::post('/to-do-list/status-change/{id?}','Frontend\SellerController@changeTodoStatus')->name('seller.todolist.status');
 
-    // media upload routes for User
-    Route::group(['namespace'=>'User'],function(){
-    Route::post('/media-upload/all','MediaUploadController@all_upload_media_file')->name('web.upload.media.file.all');
-    Route::post('/media-upload','MediaUploadController@upload_media_file')->name('web.upload.media.file');
-    Route::post('/media-upload/alt','MediaUploadController@alt_change_upload_media_file')->name('web.upload.media.file.alt.change');
-    Route::post('/media-upload/delete','MediaUploadController@delete_upload_media_file')->name('web.upload.media.file.delete');
-    Route::post('/media-upload/loadmore', 'MediaUploadController@get_image_for_loadmore')->name('web.upload.media.file.loadmore');
-    });
 
 });
